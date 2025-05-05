@@ -41,4 +41,22 @@
 
 - Agile process 
     - Sprint
-    
+## Git 
+### Developers
+    - Version Control
+     
+    - Code Maintenance or backup
+### DevOps
+    - Automation (deploy/ CI/ CD)
+### Project Managers/ Leads
+    - Tracking (Project Management)
+
+### Our Decice and Online Repository
+    - Local repo => Dev environment (git)
+    - Online Repo => a. gitlab b. github c. bitbucket
+
+
+### Structure
+    - tree structure
+    - Trunk (default Branch) (main or master)
+    - History 
