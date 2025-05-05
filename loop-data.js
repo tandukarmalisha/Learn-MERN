@@ -40,9 +40,9 @@ products[i].afterDiscount = afterDiscount;
 for (let i=0; i<products.length; i++){
     console.log("Product Name: name "+products[i].name)
     console.log("Product Price Npr: "+products[i].price)
-    console.log("Discount in % "+products[i].dicount)
-    console.log("Discount Amount"+products[i].discountAmt)
-    console.log("After Discount"+products[i].afterDiscount)
+    console.log("Discount in % "+products[i].discount)
+    console.log("Discount Amount "+products[i].discountAmount)
+    console.log("After Discount "+products[i].afterDiscount)
     console.log("..........................................")
 }
 // for in, for of loops are used with array data only
