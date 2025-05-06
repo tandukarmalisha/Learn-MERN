@@ -60,3 +60,11 @@
     - tree structure
     - Trunk (default Branch) (main or master)
     - History 
+
+### SSH
+- Private key, public key
+- public key -------> server add
+- Laptop ---> Internet -----> server
+- <------ Connection req
+    - yes
+    
