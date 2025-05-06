@@ -67,4 +67,57 @@
 - Laptop ---> Internet -----> server
 - <------ Connection req
     - yes
+
+### Global Config
+    - User Setup
+     - 
+    - 'git config --global user.name "<username>"'
+    - 'git config --global user.email "<youremail@address>"'
+    - Default Branch
+        - 'git config --global default.branch "main"
+    -pull strategy
+        - 'git config --global pull.rebase true' --- Rebase
+        - 'git config --global pull.rebase false' --- Merge (Accept or configure)
+        - 'git config --global pull.ff'         ----- fast forward
+
+
+### Git Commands
+#### Initialize git in local repo
+    - 'git init'
+    - 'git remote add <name> <repoURL>' ------ add repoURL to our local repo
+
+    - 'git remote set-url <name> <newUrl>' ------ replace the old url
+    - 'git remote -v' ----- list all the available remote repo on our local repository
+
+### Clone the project
+- 'git clone <repoUrl>'
+
+### Status
+- 'git status'
+
+### Branch list
+- 'git branch'
+
+#### Staging 
+- Add tracking
+    - 'git add </filename/.>'
+- Do commit
+    - 'git commit -m "<Message>"
+
+### Push Operation
+ - 'git push <repoName> <localBranchName>[;remoteBranch]'
+   - e.g 'git push origin main:main'
+
+### Pull Operation
+- 'git pull <repoName> <remoteBranchName>'
+    eg. "git pull origin main'"
+- sometimes during pull, it might create some conflicts
+    -Manually resolve the conflict
+    - After resolving the conflict, commit the code
+
+#### Branch operation
+    - 'git checkout -b <branchName>' ---- create a branch
+    - 'git branch -d <branchName>'   ---- Delete a local branch
+    - 'git branch'                  ----- List of available branches
+    - 'git checkout <branchname>'   ----- Switch to existing branch
     
