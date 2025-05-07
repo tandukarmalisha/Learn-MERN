@@ -117,7 +117,3 @@
 
 #### Branch operation
     - 'git checkout -b <branchName>' ---- create a branch
-    - 'git branch -d <branchName>'   ---- Delete a local branch
-    - 'git branch'                  ----- List of available branches
-    - 'git checkout <branchname>'   ----- Switch to existing branch
-    
