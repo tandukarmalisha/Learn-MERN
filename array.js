@@ -1,95 +1,151 @@
 /** Array
- * Collection of data separated by commma
- * assigned in index value pair
- * index always start from 0
+ *
+ * is  a collection of data
+ * separated by comma
+ * assigned in index-value pair
+ * index always starts from 0
  * enclosed by []
- * 
- * -collection of data
+ *
+ * - collection data
  */
 
-// Single Dimensional Array
-let productInfo = ["Product Name","Cat 1","brand bane",2000,10];
-console.log(productInfo[0])
-    console.log(productInfo[1]);
-    console.log(productInfo[2]);
+// Single Dimensional array
+let productInfo = ["Product Name", "Cat 1", "brand Name", 1000, 10];
 
-    //Multidimensional array
-    let allProducts = [
-        ["Product Name","Cat 1","brand name",2000,10],
-        ["Product name","Cat 2", "brand1",1700,8],
-        ["Proudct name","Cat3","brand2",1100,5],
+console.log(productInfo[0]);
+console.log(productInfo[1]);
+console.log(productInfo[2]);
+console.log(productInfo[3]);
+console.log(productInfo[4]);
 
-    ]
-    console.log(allProducts[2][0]);
-    console.log(allProducts[2][1]);
-    console.log(allProducts[2][3]);
-    console.log(allProducts[2][4]);
+// Multi Dimensional Array
+let allProducts = [
+  ["Product Name", "Cat 1", "brand Name", 1000, 10],
+  ["Product Name 2", "Cat 2", "brand 1", 1200, 8],
+  ["Product Name 3", "Cat 3", "brand 2", 1765, 7],
+  ["Product Name 3", "Cat 3", "brand 2", 1765, 7],
+];
 
-    let product1 = [
-        "Iphone 12", //data-type: string, 0 index, product Name
-        "apple",   //brand, string
-        "Smart Phone",      //category
-        12000,          //price
-        15,             //quantity
-        10              //discoount
-    ]
-    let afterdiscount = product1[3] - product1[3]*product1[4] / 100
+console.log(allProducts[2][0]); // []
+console.log(allProducts[2][1]); // []
+console.log(allProducts[2][2]); // []
+console.log(allProducts[2][3]); // []
+console.log(allProducts[2][4]); // []
 
 
-    let productObj = {
-        discount: 10;
-        name= "iphone 12",
-        brand = "apple",
+let product1 = [
+  "iPhone 12",    // data-type: string, 0 index, product Name
+  "apple",      // brand, string
+  "Smart Phones",   // category
+  120000,       // price 
+  15,            // ? 
+  10           //  discount, 
+]
 
-    };
-    console.log(productObj.name)
-    console.log(productObj)
-
-
-    //JSON (JavaScript object notation)
-    //universal data type
-    //any programming language does support JSON
-    //API consume, return
+let afterDiscount = product1[3] - product1[3] * product1[4] / 100
 
 
-    let phoneDirectory = [];
+let productObj = {
+  discount: 10,
+  name: "iPhone 12",
+  brand: "apple",
+  category: "Smart Phones",
+  price: 120000,
+  stock: 15,
+};
 
-    leet userOne = {
-        name: "Username One",
-        email: "one@username.com",
-        address:"Kathmendu",
-        phone: 983424543,
-    };
-    let userTwo = {
-        name: "Usernaeme Two"
-    }
-    //insert in an array
-    //from end (like queue)
+console.log(productObj.name)
+console.log(productObj['price'])
 
-    //fron top (like Stack)
-    phoneDirectory.unshift(userFour)
-    //or from any position
+let result = productObj.price - productObj.price * productObj.discount /100
 
-    let userFive = {
-        name: "Username Five",
-        email: "five@username.com",
-        address: "Bhaktapur",
-        Phone: 9839284902,
-    }
+console.log(result)
 
 
-    //Read from an array
-        //from end(stack)
-        let last = phoneDirectoy
-        //from top(queue)
-        //or from any position
-        //splice
-        //push
-        //pop
-    
+// JSON (JavaScript Object Notation)
+// Universal Data type 
+  // any programming language does support JSON
+    // API consume, return 
+
+let phoneDirectory = [];
+
+let userOne = {
+  name: "Username One",
+  email: 'one@username.com',
+  address: "Kathmandu",
+  phone: 9876543210
+}
+let userTwo = {
+  name: "Username Two",
+  email: "two@username.com",
+  address: "Kathmandu",
+  phone: 9809876543,
+};
+// Insert in an array 
+  // from end (Like Queue)
+  console.log(phoneDirectory)   // []
+
+  phoneDirectory.push(userOne, userTwo)
+
+  // console.log(phoneDirectory)   // [{}, {}]
+
+let userThree = {
+  name: "Username Three",
+  email: "three@username.com",
+  address: "Lalitpur",
+  phone: 9876098769,
+};
+phoneDirectory.push(userThree)
+  // console.log(phoneDirectory)   // [{}, {}, {}]
+
+  // phoneDirectory.push(userTwo);
+
+let userFour = {
+  name: "Username Four",
+  email: "four@username.com",
+  address: "Bhaktapur",
+  phone: 985421098,
+};
+// [{}, {}, {}, {}]
+  // from top (like Stack)
+  phoneDirectory.unshift(userFour)
+  // console.log(phoneDirectory)
+  // or any position
+
+let userFive = {
+  name: "Username Five",
+  email: "five@username.com",
+  address: "Bhaktapur",
+  phone: 9876509876,
+};
+
+// 0,1,..., 2,3
+phoneDirectory.splice(2, 0, userFive)
+// console.log(phoneDirectory)
+// 0,1,2,3,
+// Read from an array
+  // from end (stack)
+  // let last = phoneDirectory.pop()
+  // console.log(phoneDirectory)
+  // from top (queue)
+  // let first = phoneDirectory.shift()
+  // or any position 
+
+  // 0,1,2,3,4 => return index 2 => shift 3 to 2, 4 to 3
+  let index2 = phoneDirectory.splice(2,2)
+  // splice(index, counter, [replacement value])
+  // .splice(1,0, "any")  
+    // 1 insert "any"
+  // .splice(1,1, "any")
+    // 1 index replace "any" reutrns existing 1 indexed value
+  // .splice(1,2,"any")
+    // 1and 2 index value will be returned, and replace with "any" and shift another value 
+  // .splice(1, 1)  
+    // return index value 1 value and shifts the next elements
+  console.log(phoneDirectory)
 
 
-        //Task: 
-        //Create an array variable named as students and assign at least 5-10 student information, as an object to the array. 
-        //USe a different array functions for insertion ( .push(), .unshirt(), .splice())
-        // Each student information should contain name, email, address and scroObtained(Should be less than 200)
+// Task: 1 
+// Create an array variable named as students and assign atleast 5-10 student informations as an object to the array.
+// Use different array functions for insertion (.push(), .unshift(), .splice() )
+// Each student information must contain, name, email, address, and scoreObtained(Should be less than 500)
