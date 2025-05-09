@@ -38,3 +38,5 @@ else{
     amount = 80 + 20 * 4.5 + 30 * 5 + 50 * 7.5 + 100 * 12 + 200 * 15 + (unit-430) * 25
 }
 console.log(amount)
+
+// for each value is entered without using loop
