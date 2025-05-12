@@ -87,25 +87,69 @@ function handler(i){
   // }, 1000);
   
   
-  let arr = [1,2,3,4,5,6]
+//   let arr = [1,2,3,4,5,6]
   
-  const hanlder = (val, i) => {};
+//   const hanlder = (val, i) => {};
   
-  // for(let i in arr) {
-  //   console.log(i)
-  //   console.log(arr[i])
-  // }
+//   // for(let i in arr) {
+//   //   console.log(i)
+//   //   console.log(arr[i])
+//   // }
   
-  // 
+//   // 
   
-  arr.forEach(handler)
+//   arr.forEach(handler)
   
-  arr.forEach((val) => {
-    console.log({val})
-  });
+//   arr.forEach((val) => {
+//     console.log({val})
+//   });
   
-  let newarr = arr.map((val, i) => {
-    return val * 2
-  })
+//   let newarr = arr.map((val, i) => {
+//     return val * 2
+//   })
   
-  console.log(newarr)
+//   console.log(newarr)
+
+//   let numb1 = [1,2,3,4,5,6,7,8,9,10]
+
+//   let even = []
+  
+//   for(let numb of numb1) {
+//     if(numb%2 == 0){
+//       even.push(numb)
+//     }
+//   }
+//   even = [];
+
+//   // numb1.forEach(val) => {
+//   //   if v
+//   // }
+
+//   let even1 = numb1.filter((val)=> (val % 2 == 0))
+
+//   //[2,4,6,8,10, 12, 14, 16, 18, 20]
+
+//  let result = numb1.reduce((prev, val, ind) => {
+//     console.log({prev, val, ind})
+//     prev+=val;
+//     return prev;
+//   },0)
+//   console.log(result)
+
+  //odd numbers using reduce funciton
+
+  //every
+  //some
+
+  let array = [1,2,3]
+  let key = 1
+
+  //(arr[0] === key && arr[1] === key && arr[2] === key)
+  // 1 === 1 && 2 == 1 && 3 == 1
+  //true && false && false => false
+  let boolTrue = array.every((val)=> val >= key)
+  let boolsome = array.some((val) => val === key)
+  // true || false || false => true
+
+  console.log(boolTrue)
+  console.log(boolsome) 
